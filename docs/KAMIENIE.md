@@ -38,11 +38,12 @@ Dziennik decyzji i postępów, żeby żaden czat nie gubił ciągłości.
 - 2026-11-26: Piętrowe morfemy (okurigana) odrzucone dla standardu. Ewentualnie dworski zapis
   Vulpinów przy atlasie gwary.
 - 2026-11-26: Repo upublicznione przez autora.
+- 2026-11-26: **Historia wyczyszczona** (`git filter-repo`): usunięte `HPPHumblescratch.otf`
+  i `fontinfo.txt` (licencja HPP) oraz przypadkowo commitowane `__pycache__`. Nadpisane `main`
+  i gałąź robocza; treść projektu bez zmian. Stare identyfikatory commitów (sprzed 26.11 03:40)
+  już nie obowiązują.
 
 ## Otwarte
-- **Plik HPP w historii publicznego repo:** `HPPHumblescratch.otf` jest w commicie `dabc80e`
-  na `main` (wgrany i usunięty). Licencja HPP zabrania rozpowszechniania. Do decyzji autora:
-  przywrócić repo jako prywatne albo usunąć plik z historii.
 - **Do przekazania czatowi Whitewood:** morfemy zrośnięte w zapisie rodzimym, łącznik to tylko
   transkrypcja (dopisek do „Konwencji typograficznych”).
 - **v0.2 B:** przebudowa warstw dopisków według grup. Pytania w specyfikacji v0.2.
