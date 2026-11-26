@@ -43,6 +43,13 @@ Dziennik decyzji i postępów, żeby żaden czat nie gubił ciągłości.
   i gałąź robocza; treść projektu bez zmian. Stare identyfikatory commitów (sprzed 26.11 03:40)
   już nie obowiązują.
 
+- 2026-11-26 (Krąg Cieni, świat): homebrew, Imperium pisze **Commonem**. Sąsiedzi Whitewood to
+  **elfy z Wielkich Lasów Sylwańskich**. Wyższa kasta jest wyniosła, obojętna i pilnuje swojego
+  terenu. Wędrowni elfowie niższej kasty są otwarci na kontakt. Kanał kontaktu z pismem elfim:
+  Cervan (przewodnicy szlaków, zapożyczenia elfickie wg dokumentu języka) i wędrowcy z niższej kasty.
+  Pisma kanoniczne D&D (Thorass, Dethek, Espruar…) traktujemy jako wiedzę o świecie, nie wzór
+  kształtów (prawa WotC).
+
 ## Otwarte
 - **Przeniesienie do nowego repo** (kiedyś): GitHub nadal serwuje stary commit `dabc80e` po
   identyfikatorze. Nowe repo z czystą historią rozwiąże to do końca. W README jest krótka
