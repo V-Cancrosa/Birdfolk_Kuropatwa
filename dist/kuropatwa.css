@@ -1,0 +1,14 @@
+/* Kuropatwa — pismo Birdfolk. Wygenerowane przez tools/build.py */
+@font-face {
+  font-family: "Kuropatwa";
+  src: url("kuropatwa.woff2") format("woff2"), url("kuropatwa.woff") format("woff");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Kuropatwa Drap";
+  src: url("kuropatwa-drap.woff2") format("woff2"), url("kuropatwa-drap.woff") format("woff");
+  font-display: swap;
+}
+/* Użycie: <span class="kuropatwa">kosen, !ogä!! kornik.</span> */
+.kuropatwa { font-family: "Kuropatwa", serif; font-variant-ligatures: normal; }
+.kuropatwa-drap { font-family: "Kuropatwa Drap", "Kuropatwa", serif; }
