@@ -3,7 +3,7 @@
 Data: 2026-11-26 · Status: **projekt na piśmie, nic nie budujemy przed zatwierdzeniem**
 
 Dotyczy fontu z v0.1 (`docs/superpowers/specs/2026-11-26-kuropatwa-webfont-design.md`).
-Część A jest do zatwierdzenia. Część B czeka na decyzje.
+Część A zbudowana. Część B czeka na decyzje. Część C do zatwierdzenia.
 
 ---
 
@@ -76,6 +76,79 @@ zapis rodzimy. Proponowany dopisek do rozdziału „Konwencje typograficzne”:
 - Rodzimy tekst bez łączników wygląda inaczej niż dziś.
 - Punkt listy łączy się z następnym słowem albo znika.
 - Reguła zależy od ustawień przeglądarki, które użytkownik musi włączać ręcznie.
+
+---
+
+## C. Eksport handoutów do PNG
+
+### Po co
+
+Nie każdy pobierze i zainstaluje font. DM (główny odbiorca) i gracze mają dostać gotowy obrazek
+handoutu, na przykład kartkę, stronę księgi, szyld albo tabliczkę, prosto ze wzornika.
+
+### Fakt, od którego zależy projekt
+
+Z PNG **nie da się zaznaczyć ani skopiować tekstu**: to piksele, a OCR nie zna Kuropatwy.
+Kopiowanie działa tylko tam, gdzie tekst zostaje tekstem (strona WWW, PDF, SVG): pod znakami
+Kuropatwy są zwykłe litery łacińskie. Dlatego eksport ma dwa warianty.
+
+### Projekt
+
+Nowy pasek „Zapisz handout” pod transliteratorem we wzorniku (repo i online).
+
+| Ustawienie | Wartości | Domyślnie |
+|---|---|---|
+| Tło | kartka · strona księgi · szyld · tabliczka | kartka |
+| Zapis | Pióro · Pazur (ten sam przełącznik co w transliteratorze) | kartka i księga: Pióro; szyld i tabliczka: Pazur, dopóki użytkownik sam nie przełączy |
+| Wariant | **Dla graczy** · **Dla DM-a** | Dla graczy |
+
+- **Dla graczy:** sama Kuropatwa na tle. Bez łaciny i bez ukrytego tekstu, bo gracze mają
+  odcyfrować go kluczem.
+- **Dla DM-a:**
+  - pod każdą linią Kuropatwy jej łaciński zapis, jak podpis w transliteratorze;
+  - tekst źródłowy zapisany także w metadanych PNG (chunk `tEXt`, klucz `Description`), więc da
+    się go odczytać narzędziem do metadanych;
+  - przycisk **„Kopiuj tekst”** na stronie, który kopiuje łaciński źródłowy tekst do schowka.
+    To jest właściwa odpowiedź na „chcę skopiować”.
+- **Układ:** linie tak, jak wpisano (bez automatycznego łamania). Szerokość obrazka wynika z
+  najdłuższej linii plus marginesy tła. Rozmiar pisma z suwaka, a obraz w skali 2× (ostry na
+  ekranach i w druku).
+- **Tła rysowane w przeglądarce** (canvas, bez zewnętrznych obrazków):
+
+  | Tło | Wygląd | Atrament |
+  |---|---|---|
+  | kartka | jasny papier, lekkie ziarno, nierówne brzegi | ciemnobrązowy |
+  | strona księgi | papier z cieniem grzbietu po lewej, margines, cienka linia u góry | ciemnobrązowy |
+  | szyld | deska z poziomymi słojami, dwa gwoździe | ciemniejsze, „wyryte” drewno |
+  | tabliczka | mała płytka (kamień/łupek), fazowane krawędzie | ciemna rysa z jasnym odbiciem |
+
+- **Rozpoznawanie myślnika i ligatury** działają także na obrazku: canvas w przeglądarce stosuje
+  `calt`, więc `na-ne-nir` i `- tekan` wyglądają jak w transliteratorze. Do sprawdzenia przy
+  budowie (zrzut porównawczy).
+- **Nazwa pliku:** `kuropatwa-<tło>-<gracze|dm>.png`.
+
+### Zapis pliku
+
+- **Wzornik z repo** (`specimen/index.html` otwarty lokalnie): zwykłe pobranie pliku.
+- **Wzornik online** (artifact): przeglądarka strony blokuje samodzielne pobieranie, więc strona
+  prosi o zgodę przez uprawnienie `downloads` (widz zobaczy potwierdzenie i może odmówić).
+  Gdy uprawnienie jest niedostępne albo widz odmówi, pod przyciskiem pojawia się gotowy obrazek,
+  który da się zapisać prawym przyciskiem lub długim dotknięciem.
+
+### Zmiany w repo (po zatwierdzeniu)
+
+| Plik | Zmiana |
+|---|---|
+| `tools/specimen.py` | pasek eksportu, rysowanie teł i tekstu na canvas, wstawianie chunka `tEXt`, „Kopiuj tekst”, zapis lokalny i przez `downloads` z obrazkiem zapasowym |
+| `tools/check_export.js` | Playwright: dla 4 teł × 2 wariantów generuje PNG, sprawdza wymiary, obecność/brak chunka `tEXt` (DM: jest i zawiera tekst; gracze: brak) i zapisuje podgląd do oceny wzrokowej |
+| `docs/LORE-pismo.md`, `README.md`, `docs/KAMIENIE.md` | opis eksportu |
+
+### Anty-cele
+
+- Wariant dla graczy zdradza tekst (łacina, metadane, nazwa pliku z treścią).
+- Obrazek wygląda inaczej niż podgląd w transliteratorze (inny myślnik, brak sęka, inna czcionka
+  zapasowa, bo font nie zdążył się załadować).
+- Eksport nie działa w wersji online, a strona nie mówi dlaczego.
 
 ---
 

@@ -84,5 +84,7 @@ Dziennik decyzji i postępów, żeby żaden czat nie gubił ciągłości.
 - [x] Wzornik + transliterator (`specimen/index.html`, artifact: https://claude.ai/artifact/GzU4ZCgr8KSaRHAMLv6HAX)
 - [x] v0.2 A: dwie role myślnika (gałązka wyliczenia / goła gałąź w transkrypcji), `calt`
 - [ ] v0.2 B: warstwy dopisków według grup
+- [ ] v0.2 C: eksport handoutów do PNG (kartka, księga, szyld, tabliczka; wariant dla graczy / DM-a)
+- [ ] Znaki szlaku (leśne elfy → Cervan), pomysł odłożony, „na razie jest ok”
 - [ ] Randomizacja (warianty + `calt`)
 - [ ] Wpięcie w stronę Whitewood (czat Whitewood)
