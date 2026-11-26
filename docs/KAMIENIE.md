@@ -47,6 +47,12 @@ Dziennik decyzji i postępów, żeby żaden czat nie gubił ciągłości.
   **elfy z Wielkich Lasów Sylwańskich**. Wyższa kasta jest wyniosła, obojętna i pilnuje swojego
   terenu. Wędrowni elfowie niższej kasty są otwarci na kontakt. Kanał kontaktu z pismem elfim:
   Cervan (przewodnicy szlaków, zapożyczenia elfickie wg dokumentu języka) i wędrowcy z niższej kasty.
+  Uzupełnienie (z sesji, biblioteka, Robert): **leśne elfy** to osobna kasta, inna niż arystokracja
+  elfich miast. Żyją w **Wielkich Stadach**, koczowniczych grupach wędrujących ze zwierzętami. Nie
+  są wrogie, ale się bronią. Polują nocą, ukradkiem, z łuków. Wiara: **Sylphina**, pierwsza i wieczna
+  królowa, oraz wyniesienie (po śmierci elf przechodzi na inny plan u jej boku). Kult lasu i morza.
+  Bożki to magiczne stworzenia związane z atrybutami, np. **Ishni**, wielki jednorożec, strażnik
+  Vetory przed nekromancją i nieczystymi siłami.
   Pisma kanoniczne D&D (Thorass, Dethek, Espruar…) traktujemy jako wiedzę o świecie, nie wzór
   kształtów (prawa WotC).
 
