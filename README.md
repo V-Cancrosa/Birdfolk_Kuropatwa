@@ -108,3 +108,9 @@ Według taksonomii z dokumentu języka.
 Kształty liter, kod i fonty są własne. Humblescratch i pozostałe materiały Humblewood należą do
 Hit Point Press. Ich licencja zabrania webfontu i rozpowszechniania, dlatego **nie ma ich w tym
 repo**. Licencja publiczna Kuropatwy nie jest jeszcze wybrana.
+
+## Uwaga o historii repozytorium
+
+Na początku prac do repo przez pomyłkę trafił plik fontu Hit Point Press, przesłany jako materiał
+referencyjny. Usunięto go, a historię gałęzi przepisano bez niego (26.11.2026). Repozytorium
+zostanie przeniesione do nowego, czystego repo.

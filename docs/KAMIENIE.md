@@ -44,6 +44,9 @@ Dziennik decyzji i postępów, żeby żaden czat nie gubił ciągłości.
   już nie obowiązują.
 
 ## Otwarte
+- **Przeniesienie do nowego repo** (kiedyś): GitHub nadal serwuje stary commit `dabc80e` po
+  identyfikatorze. Nowe repo z czystą historią rozwiąże to do końca. W README jest krótka
+  uwaga na końcu.
 - **Do przekazania czatowi Whitewood:** morfemy zrośnięte w zapisie rodzimym, łącznik to tylko
   transkrypcja (dopisek do „Konwencji typograficznych”).
 - **v0.2 B:** przebudowa warstw dopisków według grup. Pytania w specyfikacji v0.2.
