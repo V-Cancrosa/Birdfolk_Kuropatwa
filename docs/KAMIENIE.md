@@ -27,6 +27,26 @@ Dziennik decyzji i postępów, żeby żaden czat nie gubił ciągłości.
 - 2026-11-26: Porównanie z Humblescratch litera w literę (lokalnie, plik HPP poza repo):
   żaden kształt się nie pokrywa.
 
+- 2026-11-26: **Lore narzędzi:** `Kuropatwa` (Czysty) = zapis **piórem**, `Kuropatwa Drap` = zapis
+  **pazurem**. Opis w `docs/LORE-pismo.md`. Przyciski wzornika: Pióro / Pazur.
+- 2026-11-26 (Krąg Cieni, zatwierdzone przez MG): Whitewood rozwijało się **niezależnie od
+  Imperium**, ale na podobnym poziomie technologicznym. Możliwy wynalazek niezależny także
+  w piśmie.
+
+## Otwarte
+- **Przegląd warstwy imperialnej.** W v0.1 do „imperialnych” trafiło wszystko, czego nie
+  wyjaśniał rdzeń (`q v x y ß` i akcenty romańskie), bez oparcia w rozdziale „Wkłady językowe
+  grup”. Ten rozdział wskazuje innych autorów:
+  - `y` jest rdzenne: epenteza `y` to reguła konwersji wargowych (łyspólnota, nygła);
+  - akcenty francuskie (`é è ê ç`): Vulpin (40% francuskie), Luma (30% francuskie);
+  - akcenty włoskie i hiszpańskie (`à ì ò ù ñ`): Luma, Harengon (włoskie południowe);
+  - akcenty portugalskie (`ã ç á`): wodne, Hedge;
+  - `ß`: Mapach (niemieckie kupieckie). Hedge nie, bo szwajcarski niemiecki nie używa ß;
+  - zostają imperialne: `q x v`, do imion ludzkich.
+  Do zbadania: co D&D mówi o pismach innych ras (Common, Elvish/Espruar, Dwarvish/Dethek,
+  Infernal, Draconic…), żeby ustalić, które znaki mogły dotrzeć z zewnątrz, a które powstały
+  niezależnie.
+
 ## Postęp
 - [x] Specyfikacja: `docs/superpowers/specs/2026-11-26-kuropatwa-webfont-design.md`
 - [x] Zatwierdzenie specyfikacji

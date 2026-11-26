@@ -1,41 +1,26 @@
-## Birdfolk_Kuropatwa
-Prace nad autorskim i/lub ogólnodostępnym fontem inspirowanym Humblescratch oraz alfabetem. 
-Ma być on nazywany Birdfolk czyli Zwierzoludzki Wspólny.
+# Birdfolk · Kuropatwa
 
-#Dotyczy on:
-- [ ] D<sub>&</sub>D Core
-  - [ ] Tabaxi
-  - [ ] Kenku
-- [ ] D<sub>&</sub>D Addons
-  - [ ] Loxodon
-  - [ ] Leonin
-- [ ] D<sub>&</sub>D Official SubGames
-  - [ ] Humblewood
-    - [ ] Birdfolk
-      - [ ] Corvum
-      - [ ] Gallus
-      - [ ] Luma
-      - [ ] Raptor
-      - [ ] Strig
-    - [ ] Humblefolk
-      - [ ] Vulpin
-      - [ ] Mapach
-      - [ ] Cervan
-      - [ ] Jerbeen
-      - [ ] Ursine
+Font i alfabet **Kuropatwa**, pismo języka **Birdfolk** (Wspólny Zwierzoludzki) z kampanii
+D&D *Krąg Cieni* (Whitewood). Inspiracją było pismo Humblescratch z Humblewood, ale kształty
+liter są własne.
 
-I wiele innych...
+![Klucz Kuropatwy: każda litera w obu zapisach i przysięga Jacka](docs/preview.png)
 
----
+## Czym jest Kuropatwa
 
-## Kuropatwa: webfont
+- **Litery wiszą pod gałęzią,** która łączy całe słowo, bo w Birdfolku ciągłość mowy ma
+  pierwszeństwo. Spacja przerywa gałąź, a `!` i `?` przebijają ją w górę.
+- **Historię widać w kształcie znaków.** Rdzeń dali Corvum, potem dopisywały się inne grupy:
+  ssaki dodały łuk warg, Loxodoni belkę nad umlautem.
+- **Brak wielkich liter.** `A` i `a` wyglądają tak samo, bo nikt nie jest zapisany jako
+  ważniejszy.
+- **Dwa zapisy:** piórem (font `Kuropatwa`) i pazurem (font `Kuropatwa Drap`).
 
-Własne pismo Birdfolk. Litery wiszą pod gałęzią łączącą słowo, a warstwy pochodzenia widać
-w kształcie: rdzeń Corvum, dopisek ssaków (łuk warg), belka Loxodon, dopiski imperialne.
+Więcej: [`docs/LORE-pismo.md`](docs/LORE-pismo.md).
 
-![Klucz Kuropatwy](docs/preview.png)
+## Użycie na stronie
 
-**Gotowe pliki** w `dist/`: `kuropatwa.woff2|woff|ttf`, `kuropatwa-drap.woff2|woff|ttf`, `kuropatwa.css`.
+Skopiuj pliki z [`dist/`](dist/) obok strony:
 
 ```html
 <link rel="stylesheet" href="kuropatwa.css">
@@ -43,17 +28,83 @@ w kształcie: rdzeń Corvum, dopisek ssaków (łuk warg), belka Loxodon, dopiski
 <span class="kuropatwa-drap">kosun.</span>
 ```
 
-**Wzornik z transliteratorem:** `specimen/index.html` (otwórz lokalnie w przeglądarce).
+| Plik | Do czego |
+|---|---|
+| `kuropatwa.woff2`, `kuropatwa.woff` | zapis piórem, na stronę |
+| `kuropatwa-drap.woff2`, `kuropatwa-drap.woff` | zapis pazurem, na stronę |
+| `*.ttf` | instalacja w systemie (edytory, Foundry, grafika) |
+| `kuropatwa.css` | gotowe `@font-face` i klasy `.kuropatwa`, `.kuropatwa-drap` |
 
-**Budowanie:**
+**Wzornik z transliteratorem:** otwórz [`specimen/index.html`](specimen/index.html) w przeglądarce.
+Wpisujesz tekst po łacinie i od razu widzisz go w Kuropatwie, razem z kluczem znaków.
+
+## Zestaw znaków
+
+Według dokumentu języka (rozdz. VI):
+
+- litery `a–z`;
+- polskie `ą ć ę ł ń ó ś ź ż`;
+- `ä ö ü ß`;
+- romańskie `á é í ó ú à è ì ò ù â ê î ô û ñ ã ç`;
+- cyfry `0–9`;
+- `. , : ; ! ? $ + - / =`.
+
+Wielkie litery wskazują ten sam znak co małe.
+
+## Budowanie
 
 ```bash
 pip install -r requirements.txt
 python3 tools/build.py      # fonty do dist/ + wzornik
-python3 -m pytest -q        # testy (zestaw znaków, rozróżnialność w 16/24 px, deterministyczność)
-python3 tools/preview.py    # docs/preview.png
+python3 -m pytest -q        # testy
+python3 tools/preview.py    # odświeża docs/preview.png
 ```
 
-Kształty znaków: `src/kuropatwa/glyphs.py`. Kreski i style: `src/kuropatwa/render.py`.
-Projekt: `docs/superpowers/specs/`, dziennik decyzji: `docs/KAMIENIE.md`.
+| Gdzie | Co |
+|---|---|
+| `src/kuropatwa/glyphs.py` | kształty znaków (szkielety kresek) i warstwy |
+| `src/kuropatwa/render.py` | kreska pióra i pazura |
+| `src/kuropatwa/build.py` | składanie fontu i CSS |
+| `tools/specimen.py` | wzornik |
+| `tests/` | zestaw znaków, rozróżnialność w 16/24 px, deterministyczność |
 
+## Kto czego pilnuje
+
+- **Język Birdfolk** (słowa, dźwięki, ortografia): czat/repo **Whitewood**. Tutaj tylko odczyt.
+- **Pismo Kuropatwa** (kształty, font, lore pisma): **to repo**.
+- Decyzje i postęp: [`docs/KAMIENIE.md`](docs/KAMIENIE.md).
+
+## Rasy, które piszą Kuropatwą
+
+Według taksonomii z dokumentu języka.
+
+**Rdzenne (pierwszy krąg, `sekor`)**
+- **Birdfolk:**
+  - krukowate: Corvum, Kenku;
+  - sowy: Strig, Owlin;
+  - drapieżne: Raptor, Aarakocra;
+  - naziemne: Gallus;
+  - miejskie: Luma;
+  - wodne: kaczkowate, mewowate.
+- **Beastfolk:**
+  - psowate: Vulpin, Lupin;
+  - kotowate: Tabaxi, Leonin;
+  - Loxodon;
+  - Harengon;
+  - Cervan;
+  - Mapach;
+  - Jerbeen;
+  - jeżowate (Hedge);
+  - łasicowate;
+  - Ursine;
+  - nietoperze.
+
+**Wtórne (drugi krąg, `tekor`)**
+- **Hybrids:** Minotaur, Centaur, Satyr.
+- **Exotic:** Thri-kreen, Tortle.
+
+## Prawa
+
+Kształty liter, kod i fonty są własne. Humblescratch i pozostałe materiały Humblewood należą do
+Hit Point Press. Ich licencja zabrania webfontu i rozpowszechniania, dlatego **nie ma ich w tym
+repo**. Licencja publiczna Kuropatwy nie jest jeszcze wybrana.
