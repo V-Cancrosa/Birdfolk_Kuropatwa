@@ -3,15 +3,16 @@ from __future__ import annotations
 
 from pathlib import Path
 
+from fontTools.feaLib.builder import addOpenTypeFeaturesFromString
 from fontTools.fontBuilder import FontBuilder
 from fontTools.pens.roundingPen import RoundingPen
 from fontTools.pens.ttGlyphPen import TTGlyphPen
 from fontTools.ttLib import TTFont
 
-from .glyphs import glyph_table
+from .glyphs import MORPH_HYPHEN, glyph_table
 from .render import GRID, advance, render
 
-VERSION = "0.1.0"
+VERSION = "0.2.0"
 UPM = 1000
 ASCENT, DESCENT = 1000, -200
 FAMILIES = {"clean": "Kuropatwa", "drap": "Kuropatwa Drap"}
@@ -22,6 +23,16 @@ def _glyph_name(ch: str) -> str:
     return f"uni{ord(ch):04X}"
 
 
+MORPH_NAME = "uni002D.morph"
+
+
+def _features(table) -> str:
+    """calt: myślnik między znakami słowa (litery, ! ?) → goła gałąź (spec v0.2 A)."""
+    word = sorted({_glyph_name(c) for c in table if c.isalpha() or c in "!?"})
+    return (f"@slowo = [{' '.join(word)}];\n"
+            f"feature calt {{\n  sub @slowo {_glyph_name('-')}' @slowo by {MORPH_NAME};\n}} calt;\n")
+
+
 def _draw(path) -> object:
     pen = TTGlyphPen(None)
     path.draw(RoundingPen(pen))
@@ -30,7 +41,7 @@ def _draw(path) -> object:
 
 def build_font(style: str) -> TTFont:
     table = glyph_table()
-    order = [".notdef", "space"] + [_glyph_name(c) for c in table]
+    order = [".notdef", "space"] + [_glyph_name(c) for c in table] + [MORPH_NAME, "uni2013"]
     glyphs, metrics, cmap = {}, {}, {}
 
     notdef = TTGlyphPen(None)
@@ -61,6 +72,12 @@ def build_font(style: str) -> TTFont:
             cmap[ord(up)] = name
     if "ß" in table:
         cmap[0x1E9E] = _glyph_name("ß")
+    # półpauza = zawsze punkt wyliczenia: osobny glif o kształcie gałązki, poza regułą calt
+    glyphs["uni2013"] = _draw(render(table["-"], style))
+    metrics["uni2013"] = (advance(table["-"]), 0)
+    cmap[0x2013] = "uni2013"
+    glyphs[MORPH_NAME] = _draw(render(MORPH_HYPHEN, style))
+    metrics[MORPH_NAME] = (advance(MORPH_HYPHEN), 0)
 
     family = FAMILIES[style]
     fb = FontBuilder(UPM, isTTF=True)
@@ -90,6 +107,7 @@ def build_font(style: str) -> TTFont:
                 usWinAscent=ASCENT, usWinDescent=-DESCENT, sxHeight=700, sCapHeight=700,
                 fsType=0, achVendID="VCAN")
     fb.setupPost()
+    addOpenTypeFeaturesFromString(fb.font, _features(table))
     fb.setupHead(unitsPerEm=UPM, fontRevision=float(VERSION.rsplit(".", 1)[0]))
     return fb.font
 

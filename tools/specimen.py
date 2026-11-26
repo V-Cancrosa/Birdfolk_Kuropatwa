@@ -178,9 +178,13 @@ footer { color: var(--muted); font-size: 14px; display: grid; gap: 12px; }
       <div class="rule"><h3>Ruchomy akcent</h3>
         <div class="ex">!jack! !tam poszedł</div><div class="label">!jack! !tam poszedł</div>
         <p><code>!</code> przed słowem robi z niego akcent zdania, <code>?</code> pyta właśnie o nie. Oba przebijają gałąź w górę.</p></div>
-      <div class="rule"><h3>Łącznik to goła gałąź</h3>
-        <div class="ex">ne-kir-ka-ło</div><div class="label">ne-kir-ka-ło · nie doszedł</div>
-        <p>Granica morfemów nie przerywa słowa. Między rdzeniem a końcówką biegnie sama gałąź.</p></div>
+      <div class="rule"><h3>Morfemy się zrastają</h3>
+        <div class="ex">nekirkało</div><div class="label">nekirkało · zapis rodzimy</div>
+        <div class="ex">ne-kir-ka-ło</div><div class="label">ne-kir-ka-ło · transkrypcja dla uczącego się</div>
+        <p>Birdfolk pisze słowo jedną gałęzią i nie oddziela morfemów. Łącznik między literami to pomoc dla obcych: font pokazuje go jako odsłonięty kawałek gałęzi.</p></div>
+      <div class="rule"><h3>Wyliczenie to gałązka</h3>
+        <div class="ex">- tekan<br>- donat<br>- durol</div><div class="label">- tekan · - donat · - durol</div>
+        <p>Myślnik na początku linii to odcięta gałązka z sękiem. Font sam odróżnia go od łącznika w słowie.</p></div>
       <div class="rule"><h3>Cyfry stoją osobno</h3>
         <div class="ex">1 2 3 4 5 6 7 8 9 0</div><div class="label">un do tre kar lin son sat tok … nol</div>
         <p>Liczby nie wiszą pod gałęzią. Nacięcia liczy się od góry, cięcie przez pień dodaje pięć.</p></div>

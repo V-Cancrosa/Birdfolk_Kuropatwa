@@ -33,7 +33,36 @@ Dziennik decyzji i postępów, żeby żaden czat nie gubił ciągłości.
   Imperium**, ale na podobnym poziomie technologicznym. Możliwy wynalazek niezależny także
   w piśmie.
 
+- 2026-11-26: Rodzimy zapis **zrasta morfemy** (`nanenir`). `na-ne-nir` to notacja dla
+  uczącego się. Projekt dwóch ról myślnika: `docs/superpowers/specs/2026-11-26-kuropatwa-v0.2-design.md` (A).
+- 2026-11-26: Piętrowe morfemy (okurigana) odrzucone dla standardu. Ewentualnie dworski zapis
+  Vulpinów przy atlasie gwary.
+- 2026-11-26: Repo upublicznione przez autora.
+- 2026-11-26: **Historia wyczyszczona** (`git filter-repo`): usunięte `HPPHumblescratch.otf`
+  i `fontinfo.txt` (licencja HPP) oraz przypadkowo commitowane `__pycache__`. Nadpisane `main`
+  i gałąź robocza; treść projektu bez zmian. Stare identyfikatory commitów (sprzed 26.11 03:40)
+  już nie obowiązują.
+
+- 2026-11-26 (Krąg Cieni, świat): homebrew, Imperium pisze **Commonem**. Sąsiedzi Whitewood to
+  **elfy z Wielkich Lasów Sylwańskich**. Wyższa kasta jest wyniosła, obojętna i pilnuje swojego
+  terenu. Wędrowni elfowie niższej kasty są otwarci na kontakt. Kanał kontaktu z pismem elfim:
+  Cervan (przewodnicy szlaków, zapożyczenia elfickie wg dokumentu języka) i wędrowcy z niższej kasty.
+  Uzupełnienie (z sesji, biblioteka, Robert): **leśne elfy** to osobna kasta, inna niż arystokracja
+  elfich miast. Żyją w **Wielkich Stadach**, koczowniczych grupach wędrujących ze zwierzętami. Nie
+  są wrogie, ale się bronią. Polują nocą, ukradkiem, z łuków. Wiara: **Sylphina**, pierwsza i wieczna
+  królowa, oraz wyniesienie (po śmierci elf przechodzi na inny plan u jej boku). Kult lasu i morza.
+  Bożki to magiczne stworzenia związane z atrybutami, np. **Ishni**, wielki jednorożec, strażnik
+  Vetory przed nekromancją i nieczystymi siłami.
+  Pisma kanoniczne D&D (Thorass, Dethek, Espruar…) traktujemy jako wiedzę o świecie, nie wzór
+  kształtów (prawa WotC).
+
 ## Otwarte
+- **Przeniesienie do nowego repo** (kiedyś): GitHub nadal serwuje stary commit `dabc80e` po
+  identyfikatorze. Nowe repo z czystą historią rozwiąże to do końca. W README jest krótka
+  uwaga na końcu.
+- **Do przekazania czatowi Whitewood:** morfemy zrośnięte w zapisie rodzimym, łącznik to tylko
+  transkrypcja (dopisek do „Konwencji typograficznych”).
+- **v0.2 B:** przebudowa warstw dopisków według grup. Pytania w specyfikacji v0.2.
 - **Przegląd warstwy imperialnej.** W v0.1 do „imperialnych” trafiło wszystko, czego nie
   wyjaśniał rdzeń (`q v x y ß` i akcenty romańskie), bez oparcia w rozdziale „Wkłady językowe
   grup”. Ten rozdział wskazuje innych autorów:
@@ -53,5 +82,9 @@ Dziennik decyzji i postępów, żeby żaden czat nie gubił ciągłości.
 - [x] Generator + styl czysty (v0.1.0)
 - [x] Styl Drap
 - [x] Wzornik + transliterator (`specimen/index.html`, artifact: https://claude.ai/artifact/GzU4ZCgr8KSaRHAMLv6HAX)
+- [x] v0.2 A: dwie role myślnika (gałązka wyliczenia / goła gałąź w transkrypcji), `calt`
+- [ ] v0.2 B: warstwy dopisków według grup
+- [ ] v0.2 C: eksport handoutów do PNG (kartka, księga, szyld, tabliczka; wariant dla graczy / DM-a)
+- [ ] Znaki szlaku (leśne elfy → Cervan), pomysł odłożony, „na razie jest ok”
 - [ ] Randomizacja (warianty + `calt`)
 - [ ] Wpięcie w stronę Whitewood (czat Whitewood)
