@@ -101,13 +101,14 @@ footer { color: var(--muted); font-size: 14px; display: grid; gap: 12px; }
     <div class="title-k" aria-hidden="true">kuropatwa</div>
     <h1>Kuropatwa <span>· pismo, które zaczęli Corvum, a dopisali wszyscy</span></h1>
     <p>Litery wiszą pod gałęzią jak ptak na żerdzi, a gałąź ciągnie się przez całe słowo, bo w Birdfolku ciągłość mowy ma pierwszeństwo. Spacja przerywa gałąź. Wielkich liter nie ma, więc nikt nie jest zapisany jako ważniejszy.</p>
+    <p>Pisze się ją piórem albo pazurem. Pióro daje gładką kreskę w listach i księgach, pazur kilka równoległych rys w korze, drewnie i kamieniu.</p>
   </header>
 
   <section class="tool" aria-label="Transliterator">
     <div class="controls">
       <div class="seg" role="group" aria-label="Styl">
-        <button id="st-clean" type="button" aria-pressed="true">Czysty</button>
-        <button id="st-drap" type="button" aria-pressed="false">Drap</button>
+        <button id="st-clean" type="button" aria-pressed="true" title="Kuropatwa (Czysty)">Pióro</button>
+        <button id="st-drap" type="button" aria-pressed="false" title="Kuropatwa Drap">Pazur</button>
       </div>
       <label for="size">Rozmiar <input id="size" type="range" min="18" max="96" value="34"></label>
       <label for="gloss"><input id="gloss" type="checkbox" checked> Podpis łaciński</label>
@@ -132,8 +133,8 @@ kosun.</textarea>
     <div style="display:flex;flex-wrap:wrap;gap:12px 24px;align-items:baseline;justify-content:space-between">
       <h2 id="key-h">Klucz według warstw</h2>
       <div class="seg" role="group" aria-label="Styl klucza">
-        <button id="k-clean" type="button" aria-pressed="true">Czysty</button>
-        <button id="k-drap" type="button" aria-pressed="false">Drap</button>
+        <button id="k-clean" type="button" aria-pressed="true" title="Kuropatwa (Czysty)">Pióro</button>
+        <button id="k-drap" type="button" aria-pressed="false" title="Kuropatwa Drap">Pazur</button>
       </div>
     </div>
     <div id="key" class="layers"></div>
