@@ -154,6 +154,11 @@ def digit(n: int) -> GlyphSpec:
     return GlyphSpec(f"d{n}", "digit", 40, tuple(strokes), branch=False)
 
 
+# ----------------------------------------------------------------- glify bez własnego znaku
+# granica morfemów w transkrypcji (na-ne-nir): goła gałąź łącząca sąsiednie litery
+MORPH_HYPHEN = GlyphSpec("hyphen.morph", "punct", 16, ())
+
+
 # ----------------------------------------------------------------- budowa tabeli
 def glyph_table() -> dict[str, GlyphSpec]:
     t: dict[str, GlyphSpec] = {}
@@ -222,7 +227,10 @@ def glyph_table() -> dict[str, GlyphSpec]:
     # ! i ? przebijają gałąź w górę — marker istotności / niepewności, część słowa
     t["!"] = GlyphSpec("exclam", P, 12, (S((6, 136), (6, 56), kind="free"),))
     t["?"] = GlyphSpec("question", P, 30, (S((6, 56), (6, 116), (28, 138), kind="mark"),))
-    t["-"] = GlyphSpec("hyphen", P, 16, ())  # granica morfemów: goła gałąź
+    # myślnik domyślnie = rodzimy punkt wyliczenia: odcięta gałązka z sękiem (spec v0.2 A).
+    # Między znakami słowa font podmienia go na gołą gałąź (MORPH_HYPHEN, reguła calt w build.py).
+    t["-"] = GlyphSpec("hyphen", P, 44, (S((0, 100), (44, 100), kind="branch"),
+                                         S((20, 100), (27, 76), kind="mark")), branch=False)
     t["="] = GlyphSpec("equal", P, 36, (S((0, 62), (36, 62), kind="bar"), S((0, 38), (36, 38), kind="bar")), branch=False)
     t["/"] = GlyphSpec("slash", P, 40, (S((0, -14), (40, 118), kind="mark"),), branch=False)
     t["+"] = GlyphSpec("plus", P, 36, (S((18, 68), (18, 12), kind="free"), S((-4, 40), (40, 40), kind="free")), branch=False)

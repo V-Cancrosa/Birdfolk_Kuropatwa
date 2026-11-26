@@ -15,8 +15,18 @@ dokumentów ceremonialnych.
 ## Gałąź
 
 Litery wiszą pod gałęzią, która łączy całe słowo, jak ptak na żerdzi, bo ciągłość mowy ma
-pierwszeństwo. Spacja przerywa gałąź. Łącznik (granica morfemów) to goła gałąź. `!` i `?`
-przebijają ją w górę. Liczby nie wiszą: cyfry stoją osobno.
+pierwszeństwo. Spacja przerywa gałąź. `!` i `?` przebijają ją w górę. Liczby nie wiszą: cyfry
+stoją osobno.
+
+## Morfemy i myślnik
+
+Birdfolk pisze słowo jedną gałęzią, a morfemy zrastają się bez śladu (`nanenir`). Zapis
+`na-ne-nir` to transkrypcja dla obcych. W piśmie łącznik widać jako odsłonięty kawałek gałęzi,
+jakby ktoś zdjął z niej literę.
+
+Rodzimy myślnik służy do wyliczeń: to odcięta gałązka z sękiem, położona przed pozycją listy.
+Font sam rozpoznaje, która rola chodzi o: myślnik między literami to transkrypcja, każdy inny to
+gałązka. Półpauza `–` zawsze daje gałązkę.
 
 ## Pióro i pazur
 

@@ -3,3 +3,4 @@ skia-pathops>=0.8
 brotli>=1.1
 pillow>=10
 pytest>=8
+uharfbuzz>=0.40   # testy kształtowania tekstu

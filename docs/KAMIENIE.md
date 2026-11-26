@@ -65,5 +65,7 @@ Dziennik decyzji i postępów, żeby żaden czat nie gubił ciągłości.
 - [x] Generator + styl czysty (v0.1.0)
 - [x] Styl Drap
 - [x] Wzornik + transliterator (`specimen/index.html`, artifact: https://claude.ai/artifact/GzU4ZCgr8KSaRHAMLv6HAX)
+- [x] v0.2 A: dwie role myślnika (gałązka wyliczenia / goła gałąź w transkrypcji), `calt`
+- [ ] v0.2 B: warstwy dopisków według grup
 - [ ] Randomizacja (warianty + `calt`)
 - [ ] Wpięcie w stronę Whitewood (czat Whitewood)
